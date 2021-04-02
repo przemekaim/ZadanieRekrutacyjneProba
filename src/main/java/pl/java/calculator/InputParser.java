@@ -1,3 +1,5 @@
+package pl.java.calculator;
+
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -40,8 +42,7 @@ public class InputParser {
     public static Calculator readLastLine(List<String> contentFile) {
         String lastLine = contentFile.get(contentFile.size() - 1);
         String[] tokens = lastLine.split(" ");
-        if (tokens.length != 2)
-            throw new IllegalArgumentException("Wrong file format!");
+        checkFileFormat(tokens);
         if (!tokens[0].equalsIgnoreCase("apply"))
             throw new IllegalArgumentException("Last line should conain APPLY command!");
 

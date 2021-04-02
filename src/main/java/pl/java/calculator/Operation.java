@@ -1,3 +1,5 @@
+package pl.java.calculator;
+
 public class Operation {
 
     public static double add(double x, double y) {
