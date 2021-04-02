@@ -18,7 +18,7 @@ public class Calculator {
         for (int i = 0; i < commands.size(); i++) {
             command = commands.get(i).toLowerCase();
             tempValue = switch (command) {
-                case "add" ->  Operation.add(result, values.get(i));
+                case "add" -> Operation.add(result, values.get(i));
                 case "subtract" -> Operation.subtract(result, values.get(i));
                 case "divide" -> Operation.divide(result, values.get(i));
                 case "multiply" -> Operation.multiply(result, values.get(i));
